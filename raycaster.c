@@ -179,7 +179,7 @@ void drawRay3D(){
         glVertex2i(rx, ry);
         glEnd();
         
-        // First Person FOV - FIXED PART
+        // First Person FOV 
         float ca=pa-ra;
         if(ca < 0){
             ca = ca + 2*PI;
@@ -225,7 +225,7 @@ void buttons(unsigned char key, int x, int y){
 	// all these keys are recording my movements to make my player move 
 	if(key=='a'){
 		pa=pa-0.1; // we are now moving with respect to certain angles no fixed pixels 
-		// pa represents our angle
+		// pa represents our player angle
 		if(pa<0){
 			pa=pa+2*PI;
 		}
@@ -266,3 +266,4 @@ int main(int argc, char** argv)
  glutKeyboardFunc(buttons); // calling the button function here in glut keyboard
  glutMainLoop();
 }
+
